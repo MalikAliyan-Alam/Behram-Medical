@@ -1850,7 +1850,7 @@ footer .footer-links li a {
     }
 }
 
-@media (min-width: 420px) {
+/* @media (min-width: 420px) {
     .patients-section .image-outer {
         padding-left: 20px;
         padding-top: 40px;
@@ -1873,4 +1873,4 @@ footer .footer-links li a {
         top: 291px;
         width: 288px;
     }
-}
+} */
