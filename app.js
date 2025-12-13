@@ -17,7 +17,7 @@ mm.add("(max-width: 768px)", () => {
     gsap.utils.toArray("section").forEach((panel, i) => {
         ScrollTrigger.create({
             trigger: panel,
-            start: "top top",
+            start: "top top+=70px",
             pin: true,
             pinSpacing: false
         });
