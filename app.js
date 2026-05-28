@@ -1,33 +1,107 @@
-gsap.registerPlugin(ScrollTrigger);
+// =====================================================================
+// ALWAYS-ON BEHAVIOR (runs on every page — footer, menu, navbar scroll)
+// =====================================================================
 
-let mm = gsap.matchMedia();
+// Auto-update footer year
+(function () {
+    var yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
 
-mm.add("(max-width: 768px)", () => {
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
-    gsap.utils.toArray("section").forEach((panel, i) => {
-        ScrollTrigger.create({
-            trigger: panel,
-            start: "top top+=70px",
-            pin: true,
-            pinSpacing: false
-        });
+if (menuToggle && mobileMenuOverlay) {
+    menuToggle.addEventListener('click', function() {
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        menuToggle.setAttribute('aria-expanded', 'true');
     });
+}
 
+if (closeMenu && mobileMenuOverlay) {
+    closeMenu.addEventListener('click', function() {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    });
+}
+
+// Close menu when clicking on a link
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    });
 });
 
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
 
-// Initialize Patient Slider - Like Rise Dental Studio
+// =====================================================================
+// DEVELOPER CREDIT DROPDOWN (Esc closes, click-outside closes)
+// Uses <details class="dev-credit"> so toggling is native + keyboard-accessible.
+// =====================================================================
+document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('details.dev-credit[open]').forEach(el => {
+        el.open = false;
+        const summary = el.querySelector('summary');
+        if (summary) summary.focus();
+    });
+});
+
+document.addEventListener('click', function(e) {
+    document.querySelectorAll('details.dev-credit[open]').forEach(el => {
+        if (!el.contains(e.target)) el.open = false;
+    });
+});
+
+// =====================================================================
+// HOMEPAGE-ONLY BEHAVIOR (guarded — these libs are not loaded on other pages)
+// =====================================================================
+
+// GSAP ScrollTrigger pinning for mobile sections (homepage swiper only)
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 768px)", () => {
+        if (!document.querySelector(".sections-swiper")) return;
+        gsap.utils.toArray(".sections-swiper section").forEach((panel) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top+=70px",
+                pin: true,
+                pinSpacing: false
+            });
+        });
+    });
+}
+
+// Patient testimonials slider (requires Swiper lib + .patient-slider element)
 document.addEventListener('DOMContentLoaded', function() {
-    // Patient Testimonials Slider
-    const patientSlider = new Swiper('.patient-slider', {
+    if (typeof Swiper === 'undefined') return;
+    if (!document.querySelector('.patient-slider')) return;
+
+    new Swiper('.patient-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
         speed: 800,
         effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
+        fadeEffect: { crossFade: true },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -39,50 +113,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const closeMenu = document.getElementById('closeMenu');
-const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-        mobileMenuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-}
-
-if (closeMenu) {
-    closeMenu.addEventListener('click', function() {
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-}
-
-// Close menu when clicking on a link
-const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-});
+// =====================================================================
+// SELF-GUARDED ANIMATIONS (no-op on pages where the targets don't exist)
+// =====================================================================
 
 // Scroll-based horizontal animation for Doctor section heading (large screens only)
 function initScrollAnimation() {
     const scrollAnimateH1 = document.querySelector('.scroll-animate-h1');
     if (!scrollAnimateH1) return;
 
-    // Only apply on screens larger than 991px
     function handleScroll() {
         if (window.innerWidth <= 991) {
             scrollAnimateH1.style.transform = 'translateX(0)';
@@ -95,20 +134,15 @@ function initScrollAnimation() {
         const rect = doctorSection.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // Check if section is in viewport
         if (rect.top < windowHeight && rect.bottom > 0) {
-            // Calculate scroll progress within the section
             const sectionHeight = rect.height;
             const visibleStart = windowHeight - rect.top;
             const scrollProgress = Math.min(Math.max(visibleStart / (windowHeight + sectionHeight), 0), 1);
-
-            // Animate from 0px to +400px (move right on scroll down, back to position on scroll up)
             const translateX = scrollProgress * 400;
             scrollAnimateH1.style.transform = `translateX(${translateX}px)`;
         }
     }
 
-    // Throttle scroll event for performance
     let ticking = false;
     window.addEventListener('scroll', function() {
         if (!ticking) {
@@ -119,15 +153,9 @@ function initScrollAnimation() {
             ticking = true;
         }
     });
-
-    // Also handle on resize
     window.addEventListener('resize', handleScroll);
-
-    // Initial call
     handleScroll();
 }
-
-// Initialize scroll animation
 initScrollAnimation();
 
 // Scroll-based rotation for circular text around patient image (large screens only)
@@ -139,7 +167,6 @@ function initCircularTextRotation() {
     let currentRotation = 0;
 
     function handleScroll() {
-        // Only apply on screens larger than 991px
         if (window.innerWidth <= 991) {
             rotateTextHolders.forEach(holder => {
                 holder.style.transform = 'rotate(0deg)';
@@ -153,13 +180,9 @@ function initCircularTextRotation() {
         const rect = patientsSection.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // Check if section is in viewport
         if (rect.top < windowHeight && rect.bottom > 0) {
             const scrollDelta = window.scrollY - lastScrollY;
-
-            // Rotate based on scroll direction: scroll down = rotate right, scroll up = rotate left
             currentRotation += scrollDelta * 0.3;
-
             rotateTextHolders.forEach(holder => {
                 holder.style.transform = `rotate(${currentRotation}deg)`;
             });
@@ -168,7 +191,6 @@ function initCircularTextRotation() {
         lastScrollY = window.scrollY;
     }
 
-    // Throttle scroll event for performance
     let ticking = false;
     window.addEventListener('scroll', function() {
         if (!ticking) {
@@ -180,7 +202,6 @@ function initCircularTextRotation() {
         }
     });
 
-    // Handle resize
     window.addEventListener('resize', function() {
         if (window.innerWidth <= 991) {
             rotateTextHolders.forEach(holder => {
@@ -189,6 +210,4 @@ function initCircularTextRotation() {
         }
     });
 }
-
-// Initialize circular text rotation
 initCircularTextRotation();

@@ -5,11 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Best Dental Clinic in Karachi | Barham Medical & Dental Care</title>
+    <title>Best Dental Clinic in Karachi | Barham Dental Care</title>
 
-    <meta name="description" content="Barham Medical & Dental Care is among top dental clinics in Karachi providing braces, implants, root canal & cosmetic dentistry. Book appointment today.">
+    <meta name="description" content="Barham Dental Care is a leading dental clinic in DHA Phase 2, Karachi. We specialize in dental implants, orthodontics, veneers, teeth whitening, root canal, and pediatric dentistry. Book your appointment today.">
 
-    <link rel="shortcut icon" href="./images/logoR.webp." type="image/x-icon">
+    <!-- Open Graph -->
+    <!-- TODO: replace og:image with dedicated og-image.jpg (1200x630px). Using hero_img.webp as fallback. -->
+    <meta property="og:title" content="Best Dental Clinic in Karachi | Barham Dental Care">
+    <meta property="og:description" content="Barham Dental Care is a leading dental clinic in DHA Phase 2, Karachi. Dental implants, orthodontics, veneers, teeth whitening, root canal, and pediatric dentistry. Book your appointment today.">
+    <meta property="og:image" content="https://barhamdental.com/images/hero_img.webp">
+    <meta property="og:url" content="https://barhamdental.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Barham Dental Care">
+    <meta property="og:locale" content="en_PK">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best Dental Clinic in Karachi | Barham Dental Care">
+    <meta name="twitter:description" content="Barham Dental Care — trusted dental clinic in DHA Phase 2, Karachi. Implants, orthodontics, veneers, whitening, root canal, pediatric dentistry.">
+    <meta name="twitter:image" content="https://barhamdental.com/images/hero_img.webp">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -27,19 +43,30 @@
 
     <div class="fixed-buttons">
   <a href="tel:+923322528060" class="btn call-btn">CALL NOW</a>
-  <a href="https://wa.me/923322528060?text=Hello,%20Behram%20Medical!%20Can%20I%20get%20some%20info." class="btn book-btn">BOOK NOW</a>
+  <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20I%20get%20some%20info." class="btn book-btn" target="_blank" rel="noopener">BOOK NOW</a>
 </div>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20I%20want%20to%20book%20an%20appointment."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener"
+       aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.198-.66.198-1.005 0-.488-1.317-1.122-1.66-1.22zm-2.564 5.762c-.616 0-1.232-.116-1.834-.245l-3.65 1.034 1.014-3.564a8.557 8.557 0 0 1-.405-2.578c0-4.785 3.892-8.678 8.678-8.678 4.785 0 8.678 3.892 8.678 8.678 0 4.786-3.893 8.678-8.678 8.678-1.31 0-2.594-.288-3.754-.846l-.05.522zm0-19.087C11.323 3.88 7 8.203 7 13.547c0 1.797.508 3.572 1.398 5.18L7 24.13l5.55-1.448a10.51 10.51 0 0 0 4.997 1.276h.005c5.85 0 10.598-4.748 10.6-10.602 0-2.83-1.106-5.49-3.11-7.495-2.005-2.003-4.667-3.107-7.495-3.107z"/>
+      </svg>
+    </a>
 
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <div class="container navbar-container">
             <div class="logo">
                 <a href="#">
-                    <img src="images/logoR.webp" loading="lazy" alt="Barham Medical & Dental Care Logo  || Best Dental in DHA Karachi " class="logo-img">
-                    <span class="logo-text">BARHAM<br>MEDICAL<br>& DENTAL</span>
+                    <img src="images/logoR.webp" fetchpriority="high" decoding="async" width="200" height="200" alt="Barham Dental Care Logo" class="logo-img">
+                    <span class="logo-text">BARHAM<br>DENTAL<br>CARE</span>
                 </a>
             </div>
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenuOverlay">
                 <span class="menu-text">menu</span>
             </button>
         </div>
@@ -51,17 +78,17 @@
             <div class="mobile-menu-header">
                 <div class="logo">
                     <a href="#">
-                        <img src="images/logoR.webp" fetchpriority="high" srcset="./images/logoR.400.webp 400w" alt="Barham Medical" class="logo-img">
-                        <span class="logo-text">BARHAM<br>MEDICAL<br>& DENTAL</span>
+                        <img src="images/logoR.webp" decoding="async" width="200" height="200" srcset="./images/logoR.400.webp 400w" alt="Barham Dental Care Logo" class="logo-img">
+                        <span class="logo-text">BARHAM<br>DENTAL<br>CARE</span>
                     </a>
                 </div>
-                <button class="close-menu" id="closeMenu">close</button>
+                <button class="close-menu" id="closeMenu" aria-label="Close navigation menu">close</button>
             </div>
             <ul class="mobile-nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="btn-menu-services">Services</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="services.html" class="btn-menu-services">Services</a></li>
+                <li><a href="reviews.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -70,7 +97,7 @@
         <div class="swiper-wrapper">
             <section class="swiper-slide home-hero">
                 <div class="bg-holder">
-                    <img src="images/hero_img.webp" fetchpriority="high" srcset="./images/hero_img.400.webp 400w" alt="Barham Medical & Dental Care || Best Dental Clinic in DHA Karachi" />
+                    <img src="images/hero_img.webp" fetchpriority="high" decoding="async" width="1920" height="1080" srcset="./images/hero_img.400.webp 400w" alt="Modern dental clinic interior at Barham Dental Care in DHA Karachi" />
                 </div>
                 <div class="hero-wrap">
                     <div class="container">
@@ -83,14 +110,15 @@
             <section class="swiper-slide home-intro " id="about">
                 <div class="container">
                     <div class="holder">
-                        <h1>
-                            We keep it<br />
-                            clean and simple.
-                        </h1>
+                        <!-- HERO COPY OPTIONS — uncomment the one you want -->
+                        <!-- Option 1 (ACTIVE): "Karachi's trusted dental care — where every smile matters" -->
+                        <!-- Option 2: "Modern dentistry in the heart of DHA Karachi" -->
+                        <!-- Option 3: "Painless dental care, world-class results — right here in Karachi" -->
+                        <h1>Karachi's trusted dental care &mdash; where every smile matters</h1>
                         <p>
-                            Barham Medical & Dental Care, formerly In DHA Karachi, a distinguished practice in Midtown Manhattan, has been serving the community with comprehensive dental care for over 10years. Conveniently located in Karachi City Barham Medical & Dental care is more than a dental practice—it’s a legacy built on trust and unwavering dedication to providing outstanding dental care.
+                            Barham Dental Care is a trusted dental practice based in DHA Phase 2, Karachi. For over 10 years, we’ve been serving the community with comprehensive, modern dental care — built on a foundation of trust, precision, and patient comfort.
                         </p>
-                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank"
+                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener"
                             class="btn btn-primary js-popup-opener" data-links="book">Book NOW</a>
                     </div>
                 </div>
@@ -98,45 +126,45 @@
             <section class="swiper-slide home-services " id="services">
                 <div class="container">
                     <div class="head-text">
-                        <h1 class="anim-title">A dentist in Karachi who’ll remember <span>you</span> from your last visit.
+                        <h1 class="anim-title">A dentist in Karachi who&rsquo;ll remember <span>you</span> from your last visit.
                         </h1>
                     </div>
                     <div class="book-services">
                         <div class="block">
-                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">Exams & Cleanings</a></div>
-                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank"
+                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener">Exams & Cleanings</a></div>
+                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener"
                                     class="js-popup-opener" data-links="book">Book Now</a></div>
                         </div>
                         <div class="block">
-                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">Emergency Dentistry</a></div>
-                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank"
+                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener">Emergency Dentistry</a></div>
+                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener"
                                     class="js-popup-opener" data-links="book">Book Now</a></div>
                         </div>
                         <div class="block">
-                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">Braces & Ortho</a></div>
-                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank"
+                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener">Braces & Ortho</a></div>
+                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener"
                                     class="js-popup-opener" data-links="book">Book Now</a></div>
                         </div>
                         <div class="block">
-                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">Dental Implants</a></div>
-                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank"
+                            <div class="service-text"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener">Dental Implants</a></div>
+                            <div class="book-link"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener"
                                     class="js-popup-opener" data-links="book">Book Now</a></div>
                         </div>
                         <div class="text-right">
-                            <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link btn-menu-services">View all services</a>
+                            <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link btn-menu-services">View all services</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="swiper-slide doctor-section">
+            <section class="swiper-slide doctor-section" id="doctor">
                 <div class="container">
                     <div class="doctor-wrap">
                         <div class="image-holder">
-                            <img src="images/Drfayaz.webp" loading="lazy" alt="Dr. Fayaz Rasool || Bahram Medical Doctor || Karachi top Dental Clinic" />
+                            <img src="images/Drfayaz.webp" loading="lazy" decoding="async" width="800" height="1000" alt="Dr. Fayaz Rasool, Dental Surgeon at Barham Dental Care, Karachi" />
                         </div>
                         <div class="desc-holder">
                             <h1 data-speed="150" class="scroll-animate-h1">Dr. Fayaz Rasool</h1>
-                            <div class="btn-holder"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn btn-secondary">Meet
+                            <div class="btn-holder"><a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn btn-secondary">Meet
                                     Him</a></div>
                             <span class="text">Supporting your personal standard of oral health</span>
                         </div>
@@ -152,7 +180,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/review2.webp" alt="Shaheer Ahmed A happy Patient From Barham Medical & Dental Care" /></a>
+                                            <a href="#"><img src="images/review2.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Shaheer Ahmed at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -176,7 +204,7 @@
                                             </p>
                                             <span class="name">Shaheer Ahmed</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +212,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/review1.webp" loading="lazy" alt="Babar Awan, A happy Patient From Barham Medical & Dental Care" /></a>
+                                            <a href="#"><img src="images/review1.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Babar Awan at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -204,12 +232,12 @@
                                     <div class="desc-holder">
                                         <div class="frame">
                                             <p>
-                                                Had a wonderful experience with Braham Medical & Dental care they provide top notch treatments in comfortable clean and healthy environment.
+                                                Had a wonderful experience with Barham Medical & Dental care they provide top notch treatments in comfortable clean and healthy environment.
                                                 Highly recommended.
                                             </p>
                                             <span class="name">Babar Awan</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +245,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/avatar.webp" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/avatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Byran Daniel at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -241,7 +269,7 @@
                                             </p>
                                             <span class="name">- Byran Daniel</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +277,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/girlavatar.webp" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Amna Qazi at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -273,7 +301,7 @@
                                             </p>
                                             <span class="name">- Amna Qazi</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +309,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/avatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/avatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Asghar Nazeer at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -305,7 +333,7 @@
                                             </p>
                                             <span class="name">- Asghar Nazeer</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +341,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/review1.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/review1.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Babar Awan at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -333,12 +361,12 @@
                                     <div class="desc-holder">
                                         <div class="frame">
                                             <p>
-                                                Had a wonderful experience with Braham Medical & Dental care they provide top notch treatments in comfortable clean and healthy environment.
+                                                Had a wonderful experience with Barham Medical & Dental care they provide top notch treatments in comfortable clean and healthy environment.
                                                 Highly recommended.
                                             </p>
                                             <span class="name">Babar Awan</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +374,7 @@
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Saba Asghar at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -370,7 +398,7 @@ I had my tooth filling and scaling done at Barham Medical & Dental Care, and I�
                                             </p>
                                             <span class="name">- Saba Asghar</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +406,7 @@ I had my tooth filling and scaling done at Barham Medical & Dental Care, and I�
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Iqra Aziz at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -402,7 +430,7 @@ Dr. Fayaz Rasool's skill in surgical extractions is commendable. The procedure w
                                             </p>
                                             <span class="name">- Iqra Aziz</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -410,7 +438,7 @@ Dr. Fayaz Rasool's skill in surgical extractions is commendable. The procedure w
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/girlavatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Sana Memon at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -434,7 +462,7 @@ Dr Fayaz is the best dentist i've ever been to.He's very caring and professional
                                             </p>
                                             <span class="name">- Sana Memon</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +470,7 @@ Dr Fayaz is the best dentist i've ever been to.He's very caring and professional
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/avatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/avatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Danial Mughal at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -466,7 +494,7 @@ Had an amazing experience at barham dental clinic, the whole staff was very cari
                                             </p>
                                             <span class="name">- Danial Mughal</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -474,7 +502,7 @@ Had an amazing experience at barham dental clinic, the whole staff was very cari
                                 <div class="holder">
                                     <div class="image-outer">
                                         <div class="image-holder">
-                                            <a href="#"><img src="images/avatar.webp" loading="lazy" alt="A happy patient from Barham Medical & Dental Care || Karachi No 1 Dental Clinic" /></a>
+                                            <a href="#"><img src="images/avatar.webp" loading="lazy" decoding="async" width="600" height="600" alt="Patient Zia Abbas at Barham Dental Care" /></a>
                                             <div class="rotate-text-holder">
                                                 <svg viewBox="0 0 300 300" class="circular-text-svg">
                                                     <defs>
@@ -498,7 +526,7 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
                                             </p>
                                             <span class="name">- Zia Abbas</span>
                                         </div>
-                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank" class="btn-link">ALL PATIENT STORIES</a>
+                                        <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener" class="btn-link">ALL PATIENT STORIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -521,11 +549,11 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
 
                             </div>
                             <div class="holder">
-                                <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Medical!%20Can%20i%20get%20Some%20info." target="_blank">+92 332 2528060</a>
+                                <a href="https://wa.me/923322528060?text=Hello,%20Barham%20Dental!%20Can%20i%20get%20Some%20info." target="_blank" rel="noopener">+92 332 2528060</a>
                             </div>
                             <div class="holder">
                                 <address>
-                                    <a href="https://maps.app.goo.gl/PhDg84iteZoXhfV88" target="_blank">
+                                    <a href="https://maps.app.goo.gl/PhDg84iteZoXhfV88" target="_blank" rel="noopener">
                                     Plot #C, 23E 12th Commercial St,<br> D.H.A. Phase 2 Phase 2 Commercial Area ext Karachi,<br> Karachi, 75500, Pakistan
                                     </a>
                                 </address>
@@ -559,19 +587,28 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
         <div class="container">
             <div class="footer-holder">
                 <div class="footer-logo">
-                    <a href="#"><img src="images/logo.webp" alt="Barham Dental" /></a>
+                    <a href="#"><img src="images/logo.webp" loading="lazy" decoding="async" width="200" height="200" alt="Barham Dental Care Logo" /></a>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="about-rise-dental-studio.html">About</a></li>
-                    <li><a href="#" class="btn-menu-services">Services</a></li>
-                    <li><a href="Dr-Justin-Rashbaum.html">Meet DR. Fayaz Rasool</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="services.html" class="btn-menu-services">Services</a></li>
+                    <li><a href="#doctor">Meet Dr. Fayaz Rasool</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="copy"> 2025 Barham Medical & Dental Care || All Rights Reserved. <br> <a href="https://wa.me/923250905467" target="_blank">Developed By <i>AM STACK</i></a>
+            <div class="copy"> &copy; <span id="footer-year">2026</span> Barham Dental Care || All Rights Reserved. <br>
+                <details class="dev-credit">
+                    <summary aria-label="Developed by Malik Aliyan Alam — show contact options">Developed By <i>Malik Aliyan Alam</i></summary>
+                    <div class="dev-credit-options" role="menu" aria-label="Developer contact options">
+                        <a href="https://wa.me/923250905467?text=Hello%20Malik,%20I%20found%20your%20work%20on%20Barham%20Dental%20Care%20website." target="_blank" rel="noopener" role="menuitem">Contact on WhatsApp</a>
+                        <a href="https://linkedin.com/in/malik-aliyan-alam-674b46324" target="_blank" rel="noopener" role="menuitem">See LinkedIn Profile</a>
+                    </div>
+                </details>
         </div>
     </section>
     <div class="buttons-block fixed-panel hidden">
-        <div class="wrap"><a href="tel:6469068645">Call Now</a></div>
+        <div class="wrap"><a href="tel:+923322528060">Call Now</a></div>
         <div class="wrap"><a href="https://app.nexhealth.com/appt/rise-dental-studio" class="js-popup-opener"
  data-links="book">Book NOW</a></div>
     </div>
@@ -589,15 +626,17 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
 {
   "@context": "https://schema.org",
   "@type": "Dentist",
-  "name": "Barham Medical & Dental Care",
+  "name": "Barham Dental Care",
   "image": "https://barhamdental.com/images/logoR.webp",
   "@id": "https://barhamdental.com/",
   "url": "https://barhamdental.com/",
-  "telephone": "+92-332252806-0",
+  "telephone": "+92-332-2528060",
+  "email": "drfayazrasool@gmail.com",
   "priceRange": "$$",
+  "medicalSpecialty": "Dentistry",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Barham Medical & Dental Care, Karachi",
+    "streetAddress": "Plot #C, 23E 12th Commercial Street, DHA Phase 2 Commercial Area Ext",
     "addressLocality": "Karachi",
     "addressRegion": "Sindh",
     "postalCode": "75500",
@@ -605,21 +644,51 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "24.8607",
-    "longitude": "67.0011"
+    "latitude": "24.834415",
+    "longitude": "67.070976"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "10:00",
-    "closes": "22:00"
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "12:00",
+      "closes": "22:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "15:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "11:30",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "16:30",
+      "closes": "21:00"
+    }
+  ],
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "Dental Implants" },
+    { "@type": "MedicalProcedure", "name": "Orthodontics" },
+    { "@type": "MedicalProcedure", "name": "Cosmetic Dentistry" },
+    { "@type": "MedicalProcedure", "name": "Veneers" },
+    { "@type": "MedicalProcedure", "name": "Teeth Whitening" },
+    { "@type": "MedicalProcedure", "name": "Scaling and Polishing" },
+    { "@type": "MedicalProcedure", "name": "Tooth Extraction" },
+    { "@type": "MedicalProcedure", "name": "Root Canal Treatment" },
+    { "@type": "MedicalProcedure", "name": "Dental X-Rays" },
+    { "@type": "MedicalProcedure", "name": "Pediatric Dentistry" }
+  ],
+  "employee": [{
+    "@type": "Physician",
+    "name": "Dr. Fayaz Rasool",
+    "jobTitle": "Dental Surgeon"
   }],
   "sameAs": [
     "https://www.facebook.com/share/1Dn25WLT26/?mibextid=wwXIfr",
@@ -631,6 +700,7 @@ Dr Fayyaz Rasool is a great doctor. I have anxiety and too much stress as it my 
   }
 }
 </script>
+<!-- TODO: doctor credentials — waiting on BDS university, post-grad qualifications, specialization, PMDC number, years of experience (extend employee Physician entry with alumniOf, honorificSuffix, hasCredential) -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
